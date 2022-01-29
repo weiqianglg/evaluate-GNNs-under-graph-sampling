@@ -1,0 +1,44 @@
+{
+    "model": "MLP",
+    "gpu":{
+        "use":true,
+        "id":0
+    },
+
+    "dataset": "Citeseer",
+    "largest_cc": true,
+    "cache": true,
+    "store_graphml": "out/graphml/",
+    "out_dir": "out/edge_classification_test2/",
+
+    "sample": {
+      "sample_method": "RandomWalkSampler",
+      "percent_of_nodes": 100,
+      "seed": 42,
+      "subgraph": false
+    },
+
+    "params": {
+        "seed": 41,
+        "epochs": 1000,
+        "batch_size": 128,
+        "init_lr": 0.01,
+        "lr_reduce_factor": 0.5,
+        "lr_schedule_patience": 50,
+        "min_lr": 1e-5,
+        "weight_decay": 5e-4,
+        "print_epoch_interval": 10,
+        "num_epochs_patience": 100,
+        "max_time": 12
+    },
+
+    "net_params": {
+        "L": 2,
+        "hidden_dim": 64,
+        "out_dim": 32,
+        "gated": false,
+        "in_feat_dropout": 0.0,
+        "dropout": 0.0,
+        "readout": false
+    }
+}

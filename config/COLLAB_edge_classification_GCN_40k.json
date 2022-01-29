@@ -1,0 +1,46 @@
+{
+    "gpu": {
+        "use": true,
+        "id": 0
+    },
+    
+    "model": "GCN",
+    "dataset": "OGBL-COLLAB",
+    "largest_cc": true,
+    "store_graphml": "",
+    "cache": true,
+    "out_dir": "out/COLLAB_edge_classification2",
+
+    "sample": {
+      "sample_method": "MetropolisHastingsRandomWalkSampler",
+      "percent_of_nodes": 100,
+      "seed": 21,
+      "subgraph": false
+    },
+    
+    "params": {
+        "seed": 430,
+        "epochs": 500,
+        "batch_size": 32768,
+        "init_lr": 0.001,
+        "lr_reduce_factor": 0.5,
+        "lr_schedule_patience": 10,
+        "min_lr": 1e-5,
+        "weight_decay": 0.0,
+        "num_epochs_patience": 20,
+        "print_epoch_interval": 1,
+        "max_time": 12
+    },
+    
+    "net_params": {
+        "L": 3,
+        "hidden_dim": 74,
+        "out_dim": 74,
+        "residual": true,
+        "readout": "mean",
+        "in_feat_dropout": 0.0,
+        "dropout": 0.0,
+        "batch_norm": true,
+        "self_loop": false
+    }
+}
