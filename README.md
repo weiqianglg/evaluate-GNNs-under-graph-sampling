@@ -1,1 +1,6 @@
 # evaluate-GNNs-under-graph-sampling
+It is often the case that only a portion of the underlying network structure is observed in real-world settings. However, most network analysis methods are built on a complete network structure, the natural questions to ask are (a) how well these methods perform with incomplete network structure, (b) which structural observation and network analysis method to choose for a specific task, (c) is it beneficial to complete the missing structure? 
+In this paper, we consider the incomplete network structure as one random sampling instance from a complete graph, and we choose graph neural networks (GNNs), which have achieved promising results on various graph learning tasks, as the representative of network analysis methods. To identify the robustness of GNNs under graph sampling scenarios, we systemically evaluated six state-of-the-art GNNs under four commonly used graph sampling methods.
+We show that GNNs can still be applied under graph sampling scenarios, and simpler GNN models are able to outperform more sophisticated ones in a fairly experimental procedure. More importantly, we find that completing the sampled subgraph does not necessarily improve the performance of downstream tasks; it depends on the dataset itself. 
+
+this paper is still under review.
